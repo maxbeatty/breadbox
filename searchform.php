@@ -1,8 +1,5 @@
-<form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get">
-    <div>
-        <label for="s" class="screen-reader-text">Search for:</label>
-        <input type="search" id="s" name="s" value="" />
-        
-        <input type="submit" value="Search" id="searchsubmit" />
-    </div>
+<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+	<label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="Search" name="s" id="s" />
+    <input type="submit" id="searchsubmit" value="" />
 </form>

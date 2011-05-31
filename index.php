@@ -1,6 +1,6 @@
-<?php get_header(); ?>
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php get_header();
+		
+		if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
@@ -20,16 +20,17 @@
 
 		</article>
 
-	<?php endwhile; ?>
+	<?php 
+			endwhile;
+	
+			include (TEMPLATEPATH . '/_/inc/nav.php' );
 
-	<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
-
-	<?php else : ?>
+		else : ?>
 
 		<h2>Not Found</h2>
 
-	<?php endif; ?>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+	<?php endif;
+	
+	get_sidebar();
+	get_footer();
+?>
