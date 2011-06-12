@@ -100,8 +100,8 @@ a {color: #03f;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::-moz-selection{background: #4e4ea3; color: #fff; text-shadow: none;}
+::selection {background: #4e4ea3; color: #fff; text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;} 
@@ -146,11 +146,13 @@ header#top {
 }	/* title */
 	#site-title { float: left; width: 470px; margin-left: 40px; }
 	#site-title a {
-		display: inline-block;
-		height: 30px;
-		width: 116px;
-		text-indent: -9999px;
-		background: transparent url('_/img/anpret-1.png') 0 0 no-repeat;
+		font-family: "Gruppo", serif;
+		font-size: 30px; 
+		line-height: 30px; 
+		text-decoration: none; 
+		color: #9595D1; 
+		opacity: 0.8;
+		letter-spacing: 0.2em;
 	}
 	/* main nav */
 	#top nav {
