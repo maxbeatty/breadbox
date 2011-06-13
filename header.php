@@ -73,7 +73,6 @@
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	
-<!--
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -88,7 +87,6 @@
 	  })();
 	
 	</script>
--->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

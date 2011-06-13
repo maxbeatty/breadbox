@@ -300,8 +300,12 @@ footer#footer {
 	}
 	
 	#footer li a { 
-		line-height: normal; 
+		line-height: 1.5em; 
 		font-size: 85%;
+	}
+	
+	#footer li ul {
+		margin-left: 10px;
 	}
 	
 	#footer-images li {
@@ -337,24 +341,23 @@ footer#footer {
 		color: #898989;
 		margin-bottom: 1em;
 	}
-	.entry-content h1,
-	.entry-content h2,
-	.entry-content h3,
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6 { margin-bottom: 0.5em; font-weight: bold;}
+	.entry-content h1, .post h1,
+	.entry-content h2, .post h2,
+	.entry-content h3, .post h3,
+	.entry-content h4, .post h4,
+	.entry-content h5, .post h5,
+	.entry-content h6, .post h6 { margin-bottom: 0.5em; font-weight: bold;}
 	.entry-content h1 { font-size: 1.75em;}
-	.entry-content h2, article h2 {
+	.entry-content h2, article h2, .post h2 {
 		font-family: "Maven Pro", sans-serif;
 		font-weight: 400;
 		font-size: 1.5em;
 	}
-	.entry-content h3 { font-size: 1.1em;}
-	.entry-content h4 { font-size: 1.0em;}
-	.entry-content h4 { font-size: 0.9em;}
-	.entry-content h5 { font-size: 0.8em;}
-	.entry-content h6 { font-size: 0.7em;}
-	.entry-content p {
+	.entry-content h3, .post h3 { font-size: 1.1em;}
+	.entry-content h4, .post h4 { font-size: 1.0em;}
+	.entry-content h5, .post h5 { font-size: 0.8em;}
+	.entry-content h6, .post h6 { font-size: 0.7em;}
+	.entry-content p, .post p {
 		font-weight: normal;
 		font-size: 0.9em;
 		line-height: 1.5em;
@@ -422,8 +425,7 @@ ol.commentlist li.thread-odd {}
 /* Media queries!
 -------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 480px) {
-	
-		
+
 }
 
 @media all and (orientation: portrait) {

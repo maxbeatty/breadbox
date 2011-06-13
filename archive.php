@@ -1,6 +1,9 @@
-<?php get_header(); ?>
+<?php
+	get_header(); 
 
-		<?php if (have_posts()) : ?>
+	get_sidebar();
+	
+	if (have_posts()) : ?>
 
  			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
@@ -51,8 +54,7 @@
 
 		<h2>Nothing found</h2>
 
-	<?php endif; ?>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+	<?php endif;
+	
+get_footer(); 
+?>

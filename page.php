@@ -1,6 +1,9 @@
-<?php get_header(); ?>
+<?php 
+	get_header();
+	
+	get_sidebar();
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 		<article class="post" id="post-<?php the_ID(); ?>">
 
@@ -22,8 +25,7 @@
 		
 		<?php comments_template(); ?>
 
-		<?php endwhile; endif; ?>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+		<?php endwhile; endif;
+	
+	get_footer();
+?>
