@@ -122,7 +122,7 @@ ins {background-color: #4e4ea3; color: #000; text-decoration: none;}
 mark {background-color: #4e4ea3; color: #000; font-style: italic; font-weight: bold;}
 
 /* social media icon spriting thanks to komodomedia.com */
-.social-icon {
+.social-icon, #podcast {
 	display: inline-block;
 	background: transparent url('_/img/icons/social-icons.png') 0 0 no-repeat;/* apple default */
 	height: 16px;
@@ -131,8 +131,9 @@ mark {background-color: #4e4ea3; color: #000; font-style: italic; font-weight: b
 	outline: none;
 	text-indent: -9999px;
 	padding: 0;
-	margin: 8px 16px;
+	margin: 8px 4px;
 }
+	#podcast	{ background-image: url('_/img/icons/podcast.png'); }
 	.email		{ background-position: -16px 0; }
 	.forrst		{ background-position: -32px 0; }
 	.linkedin	{ background-position: -48px 0; }
@@ -162,7 +163,7 @@ header#top {
 }	/* title */
 	#site-title { 
 		float: left;
-		width: 470px;
+		width: 440px;
 		margin-left: 40px;
 		font-weight: normal;
 	}
@@ -211,6 +212,7 @@ header#top {
 		float: left;
 		width: 150px;
 		opacity: 0.6;
+		margin-right: 8px;
 	}
 		#searchform label { display: block; text-indent: -9999px; height: 0; }
 		#searchform input {
@@ -247,7 +249,7 @@ header#top {
 	-webkit-box-shadow: 0 2px 4px #e2e3f7;
 	box-shadow: 		0 2px 4px #e2e3f7;
 }
-	#content h2 {
+	#content > h2 {
 		margin: 0 0 1em 30px;
 	}
 

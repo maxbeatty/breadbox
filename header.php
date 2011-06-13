@@ -87,6 +87,8 @@
 	  })();
 	
 	</script>
+	<link rel="alternate" type="application/rss+xml" title="Anpret &raquo; Feed" href="http://feeds.feedburner.com/Anpret" />
+	<link rel="alternate" type="application/rss+xml" title="Anpret &raquo; Podcast" href="http://feeds.feedburner.com/AnpretPodcast" />
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -103,6 +105,7 @@
 			get_search_form();
 		?>
 			<a href="http://feeds.feedburner.com/Anpret" alt="Entries (RSS)" class="social-icon rss">Entries (RSS)</a>
+			<a href="htpt://feeds.feedburner.com/AnprePodcast" alt="Podcast Episodes (RSS)" id="podcast">Podcast (RSS)</a>
 		</div><!-- .page-wrap -->
 	</header>
 
