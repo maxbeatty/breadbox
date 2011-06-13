@@ -63,6 +63,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Gruppo&text=Anpret">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Maven+Pro:regular,500">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->

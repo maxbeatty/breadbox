@@ -30,7 +30,7 @@ a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background:
 
 del {text-decoration: line-through;}
 
-abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+abbr[title], dfn[title], acronym {border-bottom: 1px dotted #000; cursor: help;}
 
 /* tables still need cellspacing="0" in the markup */
 table {border-collapse: collapse; border-spacing: 0;}
@@ -96,22 +96,35 @@ body {
 }
 
 body, select, input, textarea {color: #333;}
-a {color: #03f;}
-a:hover {color: #69f;}
+
+a {
+	color: #1c206a;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: 	all 0.1s ease-in;
+	-o-transition: 		all 0.1s ease-in;
+	-ms-transition: 	all 0.1s ease-in;
+	transition: 		all 0.1s ease-in;
+}
+
+a:hover {
+	color: #3138bb;
+	text-decoration: none;
+}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #4e4ea3; color: #fff; text-shadow: none;}
 ::selection {background: #4e4ea3; color: #fff; text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+a:link {-webkit-tap-highlight-color: #4e4ea3;} 
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color: #4e4ea3; color: #000; text-decoration: none;}
+mark {background-color: #4e4ea3; color: #000; font-style: italic; font-weight: bold;}
 
-.social-icon { /* komodomedia.com */
+/* social media icon spriting thanks to komodomedia.com */
+.social-icon {
 	display: inline-block;
-	background: transparent url('_/img/social-icons.png') 0 0 no-repeat;/* apple default */
+	background: transparent url('_/img/icons/social-icons.png') 0 0 no-repeat;/* apple default */
 	height: 16px;
 	width: 16px;
 	border: none;
@@ -130,6 +143,9 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 
 .page-wrap {width: 960px; margin: 0 auto; position: relative;}
 
+/************************************************************************/
+/* Header */
+/************************************************************************/
 header#top {
 	position: fixed;
 	top: 0; left: 0;
@@ -144,9 +160,14 @@ header#top {
 	box-shadow: 		 4px 0 4px #353536;
 	opacity: 0.9;
 }	/* title */
-	#site-title { float: left; width: 470px; margin-left: 40px; }
+	#site-title { 
+		float: left;
+		width: 470px;
+		margin-left: 40px;
+		font-weight: normal;
+	}
 	#site-title a {
-		font-family: "Gruppo", serif;
+		font-family: "Gruppo", sans-serif;
 		font-size: 30px; 
 		line-height: 30px; 
 		text-decoration: none; 
@@ -165,16 +186,12 @@ header#top {
 			padding-top: 2px;
 			margin-right: 15px;
 		}
-		#top nav ul li a {
+		#top nav ul li a, #footer li a {
 			color: #cececf;
 			text-decoration: none;
 			line-height: 30px;
 			opacity: 0.5;
-			-webkit-transition: all 0.1s ease-in;
-			-moz-transition: 	all 0.1s ease-in;
-			-o-transition: 		all 0.1s ease-in;
-			-ms-transition: 	all 0.1s ease-in;
-			transition: 		all 0.1s ease-in;
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
 		}
 		#top li.current_page_item > a,
 		#top li.current-menu-ancestor > a,
@@ -183,20 +200,20 @@ header#top {
 			border-bottom: 1px dashed #bd1421; 
 			padding-bottom: 2px;
 		}
-		#top nav ul li a:hover {
+		#top nav ul li a:hover, #footer li a:hover {
 			opacity: 1;
 		}
 		#top nav ul ul {
-			display: none;
+			display: none; /* fix in future for multi-level nav */
 		}
 	/* search form */
-	#top form {
+	#searchform {
 		float: left;
 		width: 150px;
 		opacity: 0.6;
 	}
-		#top form label { display: block; text-indent: -9999px; height: 0; }
-		#top form input {
+		#searchform label { display: block; text-indent: -9999px; height: 0; }
+		#searchform input {
 			display: inline-block;
 			height: 30px;
 			outline: none;
@@ -204,7 +221,7 @@ header#top {
 			margin: 0; padding: 0;
 			float: left;
 		}
-		#top form input[type="text"] {
+		#searchform #s {
 			width: 101px;
 			background: transparent url('_/img/search-box.png') 0 0 no-repeat;/* http://365psd.com/day/123/ */
 			padding-left: 15px;
@@ -212,14 +229,17 @@ header#top {
 			color: #fdfdff;
 			font-size: 16px;
 		}
-		#top form input[type="text"]:hover { }
-		#top form input[type="submit"] {
+		#searchsubmit {
 			width: 34px;
 			background: transparent url('_/img/search-box.png') -165px 0 no-repeat;
 		}
 		
+/************************************************************************/
+/* Content */
+/************************************************************************/
+		
 #content {
-	padding: 80px 0 20px;
+	padding: 80px 0 0;
 	background-color: #fdfdff;
 	border-left: 1px solid #e2e3f7;
 	border-right: 1px solid #e2e3f7;
@@ -227,27 +247,136 @@ header#top {
 	-webkit-box-shadow: 0 2px 4px #e2e3f7;
 	box-shadow: 		0 2px 4px #e2e3f7;
 }
+
+/************************************************************************/
+/* Sidebar */
+/************************************************************************/
+aside /* #sidebar */ {
+	float: right;
+	width: 250px;
+	border-left: 1px solid #eff0fb;
+	padding-left: 30px;
+	margin: 0 30px 30px;
+}
+
+	aside h2 {
+		border-bottom: 1px dotted #bd1421;
+		padding-bottom: 4px;
+		margin: 24px 0 8px;
+	}
+	
+	aside ul li {
+		font-size: 90%;
+		margin: 0 0 8px 16px;
+	}
+	
+	aside ul li a {
+		text-decoration: none;
+	}
+	
+	aside ul li a:hover { text-decoration: underline;}
+
+/************************************************************************/
+/* Footer */
+/************************************************************************/
+
+footer#footer {
+	clear: right;
+	background: #1F1F1F url('_/img/black-Linen.png') 0 0 repeat-x;
+	margin-top: 2em;
+	padding: 1em 2em;
+	font-size: 90%;
+	border-left: 1px solid #1F1F1F;
+	border-right: 1px solid #1F1F1F;
+	-moz-box-shadow:	0 2px 8px #1F1F1F;
+	-webkit-box-shadow: 0 2px 8px #1F1F1F;
+	box-shadow: 		0 2px 8px #1F1F1F;
+}
+
+	#footer section {
+		float: left;
+		width: 25%;
+		margin-right: 5%;
+	}
+	
+	#footer li a { 
+		line-height: normal; 
+		font-size: 85%;
+	}
+	
+	#footer-images li {
+		float: left;
+		margin: 4px 8px 0 0;
+	}
 		
+	#footer > span {
+		clear: left;
+		text-align: center;
+		display: block;
+		font-size: 80%;
+	}
+
+
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
-.post {}
+.post {
+	padding-left: 60px;
+}
 
-.entry-content {}
+.entry-title {
+	font-family: "Maven Pro",sans-serif;
+	font-weight: 500;
+	font-size: 2em;
+	margin-bottom: 0.25em;
+}
+.entry-content {
+	margin-right: 340px;
+}
+	#meta {
+		font-size: 0.8em;
+		color: #898989;
+		margin-bottom: 1em;
+	}
+	.entry-content h1,
+	.entry-content h2,
+	.entry-content h3,
+	.entry-content h4,
+	.entry-content h5,
+	.entry-content h6 { margin-bottom: 0.5em; font-weight: bold;}
+	.entry-content h1 { font-size: 1.75em;}
+	.entry-content h2, article h2 {
+		font-family: "Maven Pro", sans-serif;
+		font-weight: 400;
+		font-size: 1.5em;
+	}
+	.entry-content h3 { font-size: 1.1em;}
+	.entry-content h4 { font-size: 1.0em;}
+	.entry-content h4 { font-size: 0.9em;}
+	.entry-content h5 { font-size: 0.8em;}
+	.entry-content h6 { font-size: 0.7em;}
+	.entry-content p {
+		font-weight: normal;
+		font-size: 0.9em;
+		line-height: 1.5em;
+		margin-bottom: 0.75em;
+	}
+	
+	blockquote {
+		background: #eff0fb url('_/img/quote.png') 5px 2px no-repeat;
+		padding: 1em 1.5em 0.1em;
+		margin-bottom: 0.75em;
+		font-size: 1em;
+		font-style: italic;
+	}
 .entry-content a {}
 .entry-content a:hover {}
 
-#meta {}
-.postmetadata {}
 
-#sidebar {}
+.postmetadata {}
 
 .navgation {}
 .next-posts {}
 .prev-posts {}
-
-#searchform {}
-#s {}
-#searchsubmt {}
 	
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
