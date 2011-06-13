@@ -102,7 +102,7 @@
 			wp_nav_menu(array( 'menu' => 'Main', 'container' => 'nav' ));
 			get_search_form();
 		?>
-			<a href="<?php bloginfo('rss2_url'); ?>" alt="Entries (RSS)" class="social-icon rss">Entries (RSS)</a>
+			<a href="http://feeds.feedburner.com/Anpret" alt="Entries (RSS)" class="social-icon rss">Entries (RSS)</a>
 		</div><!-- .page-wrap -->
 	</header>
 

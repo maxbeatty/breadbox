@@ -247,6 +247,9 @@ header#top {
 	-webkit-box-shadow: 0 2px 4px #e2e3f7;
 	box-shadow: 		0 2px 4px #e2e3f7;
 }
+	#content h2 {
+		margin: 0 0 1em 30px;
+	}
 
 /************************************************************************/
 /* Sidebar */
@@ -325,6 +328,8 @@ footer#footer {
 -------------------------------------------------------------------------------*/
 .post {
 	padding-left: 60px;
+	margin-bottom: 1.5em;
+	margin-right: 340px;
 }
 
 .entry-title {
