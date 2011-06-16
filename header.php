@@ -57,8 +57,9 @@
 		         echo ' - page '. $paged; }
 		   ?>">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
-	<meta name="Copyright" content="Copyright Anpret LLC 2011. All Rights Reserved.">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<meta name="copyright" content="Copyright Anpret LLC 2011. All Rights Reserved.">
+	
+<!-- when mobile ready 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"> -->
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
@@ -105,7 +106,7 @@
 			get_search_form();
 		?>
 			<a href="http://feeds.feedburner.com/Anpret" alt="Entries (RSS)" class="social-icon rss">Entries (RSS)</a>
-			<a href="htpt://feeds.feedburner.com/AnprePodcast" alt="Podcast Episodes (RSS)" id="podcast">Podcast (RSS)</a>
+			<a href="http://feeds.feedburner.com/AnpretPodcast" alt="Podcast Episodes (RSS)" id="podcast">Podcast (RSS)</a>
 		</div><!-- .page-wrap -->
 	</header>
 
