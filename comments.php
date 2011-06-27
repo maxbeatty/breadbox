@@ -43,10 +43,10 @@
 
 <div id="respond">
 
-	<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
+	<h2><?php comment_form_title( 'Comment', 'Reply to %s' ); ?></h2>
 
 	<div class="cancel-comment-reply">
-		<?php cancel_comment_reply_link(); ?>
+		<?php cancel_comment_reply_link(); ?> <!-- todo: see if text can be customized -->
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
@@ -68,7 +68,7 @@
 
 			<div>
 				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+				<label for="email">Email (will not be published) <?php if ($req) echo "(required)"; ?></label>
 			</div>
 
 			<div>
@@ -80,14 +80,10 @@
 
 		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
-		<div>
-			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
-		</div>
+		<textarea name="comment" id="comment" cols="45" rows="5" tabindex="4"></textarea>
 
-		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-			<?php comment_id_fields(); ?>
-		</div>
+		<button name="submit" type="submit" id="submit" tabindex="5">Submit Comment</button>
+		<?php comment_id_fields(); ?>
 		
 		<?php do_action('comment_form', $post->ID); ?>
 

@@ -263,6 +263,7 @@ aside /* #sidebar */ {
 	padding-left: 30px;
 	margin: 0 30px 30px;
 }
+    aside li { list-style-type: none; }
 
 	aside h2 {
 		border-bottom: 1px dotted #bd1421;
@@ -328,9 +329,9 @@ footer#footer {
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
-.post {
+.post, ol.commentlist {
 	padding-left: 60px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.75em;
 	margin-right: 340px;
 }
 
@@ -340,8 +341,7 @@ footer#footer {
 	font-size: 2em;
 	margin-bottom: 0.25em;
 }
-.entry-content {
-}
+.entry-content {}
 	#meta {
 		font-size: 0.8em;
 		color: #898989;
@@ -363,7 +363,7 @@ footer#footer {
 	.entry-content h4, .post h4 { font-size: 1.0em;}
 	.entry-content h5, .post h5 { font-size: 0.8em;}
 	.entry-content h6, .post h6 { font-size: 0.7em;}
-	.entry-content p, .post p {
+	.entry-content p, .post p, ol.commentlist li.comment p {
 		font-weight: normal;
 		font-size: 0.9em;
 		line-height: 1.5em;
@@ -386,47 +386,86 @@ footer#footer {
 .navgation {}
 .next-posts {}
 .prev-posts {}
-	
-ol.commentlist {list-style: none;}
+/* COMMENTS */
+h2#comments, #content > #respond { margin-left: 60px; padding-left: 0; }
+ol.commentlist {
+    list-style: none;
+}
 ol.commentlist li {}
 ol.commentlist li.alt {}
-ol.commentlist li.bypostauthor {}
+ol.commentlist li.bypostauthor {background-color: #eaefff !important}
 ol.commentlist li.byuser {}
 ol.commentlist li.comment-author-admin {}
-ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
+ol.commentlist li.comment {
+    border-bottom: 1px dotted #666; 
+    padding: 10px 10px 10px 0;
+}
+ol.commentlist li.comment div.comment-body { position: relative; }
 ol.commentlist li.comment div.comment-author {}
 ol.commentlist li.comment div.vcard {}
 ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
 ol.commentlist li.comment div.vcard cite.fn a.url {}
-ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
+ol.commentlist li.comment div.vcard img.avatar {
+    float:left; 
+    margin: 0 10px 10px;
+    padding: 2px;
+    background-color: #1C206A;
+}
 ol.commentlist li.comment div.vcard img.avatar-32 {}
 ol.commentlist li.comment div.vcard img.photo {}
-ol.commentlist li.comment div.vcard span.says {}
-ol.commentlist li.comment div.commentmetadata {}
+ol.commentlist li.comment div.vcard span.says { display: none; }
+ol.commentlist li.comment div.commentmetadata {position: absolute; right: 0; bottom: 0;}
 ol.commentlist li.comment div.comment-meta {font-size: 10px;}
-ol.commentlist li.comment div.comment-meta a {color: #ccc;}
-ol.commentlist li.comment p {}
+ol.commentlist li.comment div.comment-meta a {color: #ccc; text-decoration: none;}
+ol.commentlist li.comment div.comment-meta a:hover { color: #aaa; text-decoration: underline;}
+ol.commentlist li.comment p { clear: left; margin: 10px 0; padding-left: 10px;}
 ol.commentlist li.comment ul {}
-ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply {font-size: 13px; margin-left: 1em;}
 ol.commentlist li.comment div.reply a {font-weight: bold;}
-ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
+/* comment threads */
+ol.commentlist li.comment ul.children { margin: 20px 0 0;}
 ol.commentlist li.comment ul.children li {}
 ol.commentlist li.comment ul.children li.alt {}
 ol.commentlist li.comment ul.children li.bypostauthor {}
 ol.commentlist li.comment ul.children li.byuser {}
 ol.commentlist li.comment ul.children li.comment {}
 ol.commentlist li.comment ul.children li.comment-author-admin {}
-ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
-ol.commentlist li.comment ul.children li.depth-5 {}
+ol.commentlist li.comment ul.children li.depth-2,
+ol.commentlist li.comment ul.children li.depth-3,
+ol.commentlist li.comment ul.children li.depth-4,
+ol.commentlist li.comment ul.children li.depth-5 { 
+    margin: 0 0 10px 20px;
+    border-bottom: none;
+    border-left: 1px dotted #666;
+}
 ol.commentlist li.comment ul.children li.odd {}
-ol.commentlist li.even {background: #fff;}
+ol.commentlist li.even {background: #fdfdff;}
 ol.commentlist li.odd {background: #f6f6f6;}
-ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.parent {}
 ol.commentlist li.thread-alt {}
 ol.commentlist li.thread-even {}
 ol.commentlist li.thread-odd {}
+ol.commentlist li.comment em.comment-awaiting-moderation { font-size: 0.9em; font-style: italic; }
+
+/* respond form */
+div#respond {
+    padding: 10px;
+    background-color: #fdfdff;
+}
+
+#respond h2 { margin-bottom: 0.83em;}
+.cancel-comment-reply { font-size: 0.8em; }
+#respond div { margin-bottom: 0.38em;}
+#respond form { font-size: 0.9em; }
+#respond form input {
+    height: 16px;
+}
+#respond form label { line-height: 16px; }
+#respond button {
+    display: block;
+    margin: 0.38em 0;
+}
+
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
