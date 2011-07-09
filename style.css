@@ -372,7 +372,7 @@ footer#footer {
 	.entry-content ul {
 		list-style-type: disc;
 		list-style-position: inside;
-		margin-left: 1em;
+		margin: 1em;
 	}
 	
 	blockquote {
