@@ -369,6 +369,11 @@ footer#footer {
 		line-height: 1.5em;
 		margin-bottom: 0.75em;
 	}
+	.entry-content ul {
+		list-style-type: disc;
+		list-style-position: inside;
+		margin-left: 1em;
+	}
 	
 	blockquote {
 		background: #eff0fb url('_/img/quote.png') 5px 2px no-repeat;
