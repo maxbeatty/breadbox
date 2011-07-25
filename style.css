@@ -187,7 +187,9 @@ header#top {
 			padding-top: 2px;
 			margin-right: 15px;
 		}
-		#top nav ul li a, #footer li a {
+		#top nav ul li a,
+		#footer li a,
+		#mc_embed_signup p a {
 			color: #cececf;
 			text-decoration: none;
 			line-height: 30px;
@@ -201,7 +203,9 @@ header#top {
 			border-bottom: 1px dashed #bd1421; 
 			padding-bottom: 2px;
 		}
-		#top nav ul li a:hover, #footer li a:hover {
+		#top nav ul li a:hover,
+		#footer li a:hover,
+		#mc_embed_signup p a:hover {
 			opacity: 1;
 		}
 		#top nav ul ul {
@@ -313,11 +317,6 @@ footer#footer {
 	#footer li ul {
 		margin-left: 10px;
 	}
-	
-	#footer-images li {
-		float: left;
-		margin: 4px 8px 0 0;
-	}
 		
 	#footer > span {
 		clear: left;
@@ -325,7 +324,69 @@ footer#footer {
 		display: block;
 		font-size: 80%;
 	}
-
+	
+	/* MailChimp form */
+	#mc_embed_signup {
+		font-size: 70%;
+	}
+	
+	#mc_embed_signup label {
+		display: none;
+		color: rgb(120,120,120);
+		line-height: 1.5em;
+	}
+	
+	#mc_embed_signup input {
+		border: 0;
+		outline: 0;
+		margin: 5px 0;
+		padding: 3px 5px;
+	}
+	
+	#mc-embedded-subscribe {
+		color: #484848;
+	    text-decoration: none;
+	    text-shadow: 0 1px 0 #fff;
+	    font: bold 12px Helvetica, Arial, sans-serif;
+	    line-height: 22px;
+	    height: 20px;
+	    display: block;
+	    margin: 5px 0 0;
+	    padding: 0 10px;
+	    background: #f0f0f0;
+	    background: -webkit-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -moz-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -ms-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -o-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    border: none;
+	    border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff')";
+	    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff');
+	}
+	
+	#mc-embedded-subscribe:hover {
+	    color: #282828;
+	    background: -webkit-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -moz-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -ms-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -o-linear-gradient(top, #ffffff, #dfdfdf);
+	}
+	
+	#mc-embedded-subscribe:active {
+	    background: #d0d0d0;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#a8a8a8), color-stop(0.15, #c6c6c6), to(#d8d8d8));
+	    background: -webkit-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -moz-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -ms-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -o-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	}
+	
+	#mce-success-response { color: #cececf; font-size: 12px;}
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
