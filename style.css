@@ -543,6 +543,16 @@ img#iphone {
 	border-bottom: 1px solid #353536;
 }
 
+img#iphone + h2 {
+	font-weight: 100;
+	font-size: 1.5em;
+	padding: 1em 0;
+	line-height: 1.5em;
+	margin: 0 0 0 50px !important;
+	border-bottom: 1px solid #353536;
+	width: 512px;
+}
+
 /* Media queries!
 -------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 480px) {
