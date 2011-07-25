@@ -1,5 +1,5 @@
 		<footer id="footer">
-			<a name="footer" />		
+			<a name="footer"></a>		
 			<section>
 				<h3>Pages</h3>
 				<ul>
@@ -15,6 +15,11 @@
 						'title_li' => null,
 						'show_images' => 0
 					)); ?>
+					
+					<li>
+						<a href="http://twitter.com/anpret" class="twitter-follow-button" data-button="grey" data-text-color="#787878" data-link-color="#cececf" data-show-count="false">Follow @anpret</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+					</li>
 				</ul>
 			</section>
 			
