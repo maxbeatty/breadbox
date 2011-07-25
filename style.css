@@ -449,7 +449,7 @@ footer#footer {
 
 .postmetadata {}
 
-.navgation {}
+.navigation { margin: 0 1em;}
 .next-posts {}
 .prev-posts {}
 /* COMMENTS */
@@ -532,6 +532,16 @@ div#respond {
     margin: 0.38em 0;
 }
 
+/************************************************************************/
+/* Home Page */
+/************************************************************************/
+
+img#iphone {
+	display: block;
+	margin: 0 0 0 50px;
+	padding: 0 50px;
+	border-bottom: 1px solid #353536;
+}
 
 /* Media queries!
 -------------------------------------------------------------------------------*/

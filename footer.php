@@ -1,5 +1,5 @@
 		<footer id="footer">
-			<a name="footer"></a>		
+			<a name="bottom"></a>		
 			<section>
 				<h3>Pages</h3>
 				<ul>
@@ -27,8 +27,6 @@
 				<h3>Join Our Mailing List</h3>
 				<!-- Begin MailChimp Signup Form -->
 				<script type="text/javascript">
-					// delete this script tag and use a "div.mce_inline_error{ XXX !important}" selector
-					// or fill this in and it will be inlined when errors are generated
 					var mc_custom_error_style = 'color:#bd1421;';
 				</script>
 				<div id="mc_embed_signup">
