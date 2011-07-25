@@ -142,6 +142,50 @@ mark {background-color: #4e4ea3; color: #000; font-style: italic; font-weight: b
 	.tumblr		{ background-position: -96px 0; }
 	.twitter	{ background-position: -112px 0; }
 
+/* lion-esque buttons */
+.btn {
+		color: #484848;
+	    text-decoration: none;
+	    text-shadow: 0 1px 0 #fff;
+	    font: bold 12px Helvetica, Arial, sans-serif;
+	    line-height: 1.375em;
+	    height: 1.25em;
+	    display: block;
+	    margin: 5px 0 0;
+	    padding: 0 0.625em;
+	    background: #f0f0f0;
+	    background: -webkit-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -moz-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -ms-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    background: -o-linear-gradient(top, #f7f7f7, #d1d1d1);
+	    border: none;
+	    border-radius: 4px;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff')";
+	    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff');
+	}
+	
+	.btn:hover {
+	    color: #282828;
+	    background: -webkit-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -moz-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -ms-linear-gradient(top, #ffffff, #dfdfdf);
+	    background: -o-linear-gradient(top, #ffffff, #dfdfdf);
+	}
+	
+	.btn:active {
+	    background: #d0d0d0;
+	    background: -webkit-gradient(linear, left top, left bottom, from(#a8a8a8), color-stop(0.15, #c6c6c6), to(#d8d8d8));
+	    background: -webkit-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -moz-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -ms-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	    background: -o-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+	}
+
 .page-wrap {width: 960px; margin: 0 auto; position: relative;}
 
 /************************************************************************/
@@ -163,7 +207,7 @@ header#top {
 }	/* title */
 	#site-title { 
 		float: left;
-		width: 440px;
+		width: 385px;
 		margin-left: 40px;
 		font-weight: normal;
 	}
@@ -343,54 +387,16 @@ footer#footer {
 		padding: 3px 5px;
 	}
 	
-	#mc-embedded-subscribe {
-		color: #484848;
-	    text-decoration: none;
-	    text-shadow: 0 1px 0 #fff;
-	    font: bold 12px Helvetica, Arial, sans-serif;
-	    line-height: 22px;
-	    height: 20px;
-	    display: block;
-	    margin: 5px 0 0;
-	    padding: 0 10px;
-	    background: #f0f0f0;
-	    background: -webkit-linear-gradient(top, #f7f7f7, #d1d1d1);
-	    background: -moz-linear-gradient(top, #f7f7f7, #d1d1d1);
-	    background: -ms-linear-gradient(top, #f7f7f7, #d1d1d1);
-	    background: -o-linear-gradient(top, #f7f7f7, #d1d1d1);
-	    border: none;
-	    border-radius: 4px;
-	    -webkit-border-radius: 4px;
-	    -moz-border-radius: 4px;
-	    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff')";
-	    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='#ffffff');
-	}
-	
-	#mc-embedded-subscribe:hover {
-	    color: #282828;
-	    background: -webkit-linear-gradient(top, #ffffff, #dfdfdf);
-	    background: -moz-linear-gradient(top, #ffffff, #dfdfdf);
-	    background: -ms-linear-gradient(top, #ffffff, #dfdfdf);
-	    background: -o-linear-gradient(top, #ffffff, #dfdfdf);
-	}
-	
-	#mc-embedded-subscribe:active {
-	    background: #d0d0d0;
-	    background: -webkit-gradient(linear, left top, left bottom, from(#a8a8a8), color-stop(0.15, #c6c6c6), to(#d8d8d8));
-	    background: -webkit-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
-	    background: -moz-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
-	    background: -ms-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
-	    background: -o-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
-	}
-	
 	#mce-success-response { color: #cececf; font-size: 12px;}
+
+aside.double {
+	width:145px;
+	margin: 0;
+}
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
-.post, ol.commentlist {
+.post, article.page, ol.commentlist {
 	padding-left: 60px;
 	margin-bottom: 1.75em;
 	margin-right: 340px;
@@ -403,12 +409,12 @@ footer#footer {
 	margin-bottom: 0.25em;
 }
 .entry-content {}
-	#meta {
+	#meta, .meta {
 		font-size: 0.8em;
 		color: #898989;
 		margin-bottom: 1em;
 	}
-	.entry-content h1, .post h1,
+	.entry-content h1, .post h1, .page h1,
 	.entry-content h2, .post h2,
 	.entry-content h3, .post h3,
 	.entry-content h4, .post h4,
@@ -552,6 +558,38 @@ img#iphone + h2 {
 	border-bottom: 1px solid #353536;
 	width: 512px;
 }
+
+/************************************************************************/
+/* Contact Page */
+/************************************************************************/
+.screenReader { display: none !important; }
+.inline { display: inline-block !important; padding: 8px 4px 4px 0; }
+.inline + input[type="checkbox"] { vertical-align: middle; }
+#contactForm label {
+	display: block;
+	margin: 8px 0 4px;
+}
+
+#contactForm input[type="text"],
+#contactForm textarea {
+	display: block;
+}
+
+#contactForm button {
+	font-size: 1em;
+	height: 2em;
+}
+
+.error, .success {
+	display: block;
+	padding: 0.5em 1em;
+	margin: 5px 0;
+}
+
+.error { background-color: #ff4554; }
+.success { background-color: #5fd64f; }
+
+
 
 /* Media queries!
 -------------------------------------------------------------------------------*/

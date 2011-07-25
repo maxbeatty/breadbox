@@ -7,11 +7,9 @@
 			
 		<article class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php the_title(); ?></h2>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 
-			<?php include (TEMPLATEPATH . '/_/inc/meta.php' ); ?>
-
-			<div class="entry">
+			<div class="entry-content">
 
 				<?php the_content(); ?>
 
@@ -22,8 +20,6 @@
 			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
 		</article>
-		
-		<?php comments_template(); ?>
 
 		<?php endwhile; endif;
 	
