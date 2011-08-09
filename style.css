@@ -589,7 +589,7 @@ img#iphone + h2 {
 .error { background-color: #ff4554; }
 .success { background-color: #5fd64f; }
 
-
+audio { background-color: #333; }
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
