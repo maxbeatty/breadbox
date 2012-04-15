@@ -436,10 +436,17 @@ aside.double {
 		line-height: 1.5em;
 		margin-bottom: 0.75em;
 	}
-	.entry-content ul {
+	.entry-content ul,
+	.entry ul {
 		list-style-type: disc;
 		list-style-position: inside;
 		margin: 1em;
+	}
+
+	.entry-content li, 
+	.entry li {
+		line-height: 1.25em;
+		padding-bottom: 0.5em;
 	}
 	
 	blockquote {
